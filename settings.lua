@@ -19,8 +19,22 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "train-stop-item-color-blend-item-colours",
+    name = "train-stop-item-color-blend-item-colors",
     setting_type = "runtime-global",
-    default_value = false
+    default_value = false,
+    order = "c"
+  },
+  {
+    type = "bool-setting",
+    name = "use-color-from-pipes-for-fluids",
+    setting_type = "runtime-global",
+    default_value = true,
+    order = "d"
+  },
+  {
+    type = "string-setting",
+    name = "ignore-first-icon-in-train-stop-name",
+    setting_type = "runtime-global",
+    default_value = "passive-provider-chest;requester-chest"
   }
 })

@@ -12,7 +12,14 @@ def get_rgb_avg_with_alpha(filename):
     for x in range(w):
         for y in range(h):
             pixel = pixels[x, y]
-            if len(pixel) >= 4:
+            if type(pixel) == int:
+                r, g, b, a = (pixel >> 24) % 8, (pixel >> 16) % 8, (pixel >> 8) % 8, pixel % 8
+                if a > 0:
+                    total_r += r
+                    total_g += g
+                    total_b += b
+                    pixel_count += 1
+            elif len(pixel) >= 4:
                 r, g, b, a = pixel
                 if a > 0:
                     total_r += r

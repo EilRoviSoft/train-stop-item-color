@@ -37,10 +37,11 @@ local shortcut = {
     item_to_spawn = "train-stop-color-tool",
     order = "m[color-train-stops]",
     icon_size = 32,
-     icon = "__train-stop-item-color__/graphics/icons/train-stop-item-color-x32.png",
+    icon = "__train-stop-item-color__/graphics/icons/train-stop-item-color-x32.png",
     small_icon_size = 24,
     small_icon = "__train-stop-item-color__/graphics/icons/train-stop-item-color-x24.png",
 	localised_name = {"shortcut-name.color-train-stops"}
 }
+
 
 data:extend { item, shortcut }
